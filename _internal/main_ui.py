@@ -23,7 +23,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
+            MainWindow.setObjectName(u"AppLabelling")
         MainWindow.resize(1922, 904)
         self.actionOpen_File = QAction(MainWindow)
         self.actionOpen_File.setObjectName(u"actionOpen_File")

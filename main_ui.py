@@ -23,7 +23,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
+            MainWindow.setObjectName(u"AppLabelling")
         MainWindow.resize(1922, 904)
         self.actionOpen_File = QAction(MainWindow)
         self.actionOpen_File.setObjectName(u"actionOpen_File")
@@ -144,8 +144,13 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuEdit.menuAction())
         self.menubar.addAction(self.menuView.menuAction())
+        self.menuFile.addAction(self.actionOpen_File)
         self.menuFile.addAction(self.actionOpen_Folder)
+        self.menuFile.addAction(self.actionOpen_Recent)
         self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionSave_as)
+        self.menuFile.addAction(self.actionSave_Automatically)
         self.menuFile.addAction(self.actionChange_output_folder)
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionNext_Image)

@@ -23,7 +23,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
-            MainWindow.setObjectName(u"AppLabelling")
+            MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1922, 904)
         self.actionOpen_File = QAction(MainWindow)
         self.actionOpen_File.setObjectName(u"actionOpen_File")
@@ -144,14 +144,10 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuEdit.menuAction())
         self.menubar.addAction(self.menuView.menuAction())
-        self.menuFile.addAction(self.actionOpen_File)
         self.menuFile.addAction(self.actionOpen_Folder)
-        self.menuFile.addAction(self.actionOpen_Recent)
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionSave)
-        self.menuFile.addAction(self.actionSave_as)
         self.menuFile.addAction(self.actionSave_Automatically)
-        self.menuFile.addAction(self.actionChange_output_folder)
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionNext_Image)
         self.menuFile.addAction(self.actionBack_Image)
@@ -170,7 +166,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"AppLabelling", None))
         self.actionOpen_File.setText(QCoreApplication.translate("MainWindow", u"Open File", None))
 #if QT_CONFIG(shortcut)
         self.actionOpen_File.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+O", None))
